@@ -43,11 +43,31 @@ public class HqmUnity : MonoBehaviour {
 						myText.text = myText.text + "\nSending custom event";
 						pluginClass.CallStatic("logEvent", "test", "{ 'test1': 'value1', 'test2': 'value2' }");
 
+
+						myText.text = myText.text + "\nSending custom string event";
+						pluginClass.CallStatic("logEvent", "test", "just_a_string");
+
+						myText.text = myText.text + "\nRequesting group id list";
+						var groupIdList = pluginClass.CallStatic<string[]>("getGroupIdList");
+                        foreach (String str in groupIdList)
+                               {
+                                 myText.text = myText.text + "\n" + str;
+                               }
+
+						myText.text = myText.text + "\nRequesting group name list";
+						var groupNameList = pluginClass.CallStatic<string[]>("getGroupNameList");
+                        foreach (String str in groupNameList)
+                               {
+                                 myText.text = myText.text + "\n" + str;
+                               }
+
+/*
 						String groupIdJson = pluginClass.CallStatic<string>("getGroupIdList");
 						myText.text = myText.text + "\ngetGroupIdList:" + groupIdJson;
 
 						String groupNameJson = pluginClass.CallStatic<string>("getGroupNameList");
 						myText.text = myText.text + "\ngetGroupNameList:" + groupNameJson;
+*/
                 }
             }
 		}
