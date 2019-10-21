@@ -27,7 +27,7 @@ public class HqmUnity : MonoBehaviour {
 						pluginClass.CallStatic("init", context,
 							"38e44d7", // your key
 							true,      // debug enabled
-							true);     // slack messages enabled
+							true);     // slack debug messages enabled
 
                         myText.text = myText.text + "\nCollecting installed apps";
 						pluginClass.CallStatic("getInstalledApps", context);
