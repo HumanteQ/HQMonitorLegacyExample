@@ -1,1 +1,1 @@
-HQM sdk core ver: 1.2.4
+HQM sdk core ver: 1.2.5
