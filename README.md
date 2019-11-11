@@ -18,28 +18,42 @@ Unity package: [hqm_2.0.0-alpha05-fix2.unitypackage](https://github.com/HumanteQ
             ...
             
             // Init SDK
-            HQSdk.init(
+            HQSdk.Init(
                 "your_api_key",     // your api key
                 true);              // is debug enabled
-               
+  ```
+  
+  5. Start SDK: ( After obtaining user consent )
+```csharp  
             // Start SDK
-            HQSdk.start();
-               
+            HQSdk.Start();
+  ```
+  
+ 6. Send user-defined event:
+```csharp  
+ 
             // Send event as text ...
-            HQSdk.logEvent("test_event", "test");
+            HQSdk.LogEvent("test_event", "test");
+```
+ 
+ 7. Send complex user-defined event:
+```csharp  
             
             // ... or as a map.
             Dictionary<string, string> map = new Dictionary<string, string>();
             map["test1"] = "test_value1";
             map["test2"] = "test_value2";
 
-            HQSdk.logEvent("test_event", map);
-            
+            HQSdk.LogEvent("test_event", map);
+```
+
+8. Request predicted user groups: (HQSdk will need some time, typically 10 - 15 min, to compute user groups)
+```csharp
             // Request predicted user group id list ...
-            var groupIdList = HQSdk.getGroupIdList();
+            var groupIdList = HQSdk.GetGroupIdList();
             
             // ... or user group name list
-            var getGroupNameList = HQSdk.getGroupNameList();
+            var getGroupNameList = HQSdk.GetGroupNameList();
             
             ...
 ```
