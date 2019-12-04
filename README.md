@@ -1,15 +1,15 @@
-[ ![Download](https://api.bintray.com/packages/humanteq/hqm-sdk/hqm-core-legacy/images/download.svg?version=2.0.0-alpha05-fix2) ](https://bintray.com/humanteq/hqm-sdk/hqm-core-legacy/2.0.0-alpha05-fix2/link)
+[ ![Download](https://api.bintray.com/packages/humanteq/hqm-sdk/hqm-core-legacy/images/download.svg?version=2.0.0-beta01) ](https://bintray.com/humanteq/hqm-sdk/hqm-core-legacy/2.0.0-beta01/link)
 
 ### HQMonitor Unity Sample App.
 
-Unity package: [hqm_2.0.0-alpha05-fix2.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-alpha05-fix2.unitypackage)
+Unity package: [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-beta01.unitypackage)
 
 ###### Integration instructions:
 
 1. Install [Play Services Resolver](https://github.com/googlesamples/unity-jar-resolver/)
-2. Download and import [hqm_2.0.0-alpha05-fix2.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-alpha05-fix2.unitypackage)
+2. Download and import [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-beta01.unitypackage)
 
-   `(Assets -> Import package -> Custom package -> hqm_2.0.0-alpha05-fix2.unitypackage )`
+   `(Assets -> Import package -> Custom package -> hqm_2.0.0-beta01.unitypackage )`
 3. Force resolve dependencies:
 
    `(Assets -> Play Services Resolver -> Android Resolver -> Force Resolve)`
