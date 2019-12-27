@@ -1,19 +1,19 @@
-[ ![Download](https://api.bintray.com/packages/humanteq/hqm-sdk/hqm-core-legacy/images/download.svg?version=2.0.0-beta01) ](https://bintray.com/humanteq/hqm-sdk/hqm-core-legacy/2.0.0-beta01/link)
+[ ![Download](https://api.bintray.com/packages/humanteq/hqm-sdk/hqm-core-legacy/images/download.svg) ](https://bintray.com/humanteq/hqm-sdk/hqm-core-legacy/_latestVersion)
 
-### HQMonitor Unity Sample App.
+## HQMonitor Unity Sample App.
 
-Unity package: [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-beta01.unitypackage)
+Unity package: [hqm_2.0.0.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0.unitypackage)
 
-###### Integration instructions:
+#### Integration instructions:
 
-1. Install [Play Services Resolver](https://github.com/googlesamples/unity-jar-resolver/)
-2. Download and import [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0-beta01.unitypackage)
+  1. Install [Play Services Resolver](https://github.com/googlesamples/unity-jar-resolver/)
+  2. Download and import [hqm_2.0.0.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0.unitypackage)
 
-   `(Assets -> Import package -> Custom package -> hqm_2.0.0-beta01.unitypackage )`
-3. Force resolve dependencies:
+   `(Assets -> Import package -> Custom package -> hqm_2.0.0.unitypackage )`
+  3. Force resolve dependencies:
 
    `(Assets -> Play Services Resolver -> Android Resolver -> Force Resolve)`
-4. Initialize SDK:
+  4. Initialize SDK:
 ```csharp
             ...
             
@@ -29,14 +29,14 @@ Unity package: [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMon
             HQSdk.Start();
   ```
   
- 6. Send user-defined event:
+  6. Send user-defined event:
 ```csharp  
  
             // Send event as text ...
             HQSdk.LogEvent("test_event", "test");
 ```
  
- 7. Send complex user-defined event:
+  7. Send complex user-defined event:
 ```csharp  
             
             // ... or as a map.
@@ -47,7 +47,7 @@ Unity package: [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMon
             HQSdk.LogEvent("test_event", map);
 ```
 
-8. Request predicted user groups: (HQSdk will need some time, typically 10 - 15 min, to compute user groups)
+  8. Request predicted user groups: (HQSdk will need some time, typically 10 - 15 min, to compute user groups)
 ```csharp
             // Request predicted user group id list ...
             var groupIdList = HQSdk.GetGroupIdList();
@@ -59,3 +59,16 @@ Unity package: [hqm_2.0.0-beta01.unitypackage](https://github.com/HumanteQ/HQMon
 ```
 
 Startup script example: [HqmUnity.cs](https://github.com/HumanteQ/HQMonitorLegacyExample/blob/master/Assets/HqmPlugin/HqmUnity.cs)
+
+#### GDPR compliance.
+To comply with GDPR, we provide following user data management methods:
+1. Request for user data. 
+A report with current user data will be sent to the provided email.
+```csharp
+            HQSdk.RequestUserData("some@email.org");
+```
+
+2. User data deletion request. All current user data will be deleted from Humanteq servers.
+```csharp
+            HQSdk.DeleteUserData();
+```
