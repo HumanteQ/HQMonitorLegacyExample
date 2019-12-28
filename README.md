@@ -10,9 +10,11 @@ Unity package: [hqm_2.0.0.unitypackage](https://github.com/HumanteQ/HQMonitorLeg
   2. Download and import [hqm_2.0.0.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.0.unitypackage)
 
    `(Assets -> Import package -> Custom package -> hqm_2.0.0.unitypackage )`
+   
   3. Force resolve dependencies:
 
    `(Assets -> Play Services Resolver -> Android Resolver -> Force Resolve)`
+   
   4. Initialize SDK:
 ```csharp
             ...
