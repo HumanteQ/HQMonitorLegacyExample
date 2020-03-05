@@ -2,14 +2,14 @@
 
 ## HQMonitor Unity Sample App.
 
-Unity package: [hqm_2.0.1.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.1.unitypackage)
+Unity package: [hqm_2.0.3-fix1.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.3-fix1.unitypackage)
 
 #### Integration instructions:
 
   1. Install [Play Services Resolver](https://github.com/googlesamples/unity-jar-resolver/)
-  2. Download and import [hqm_2.0.1.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.1.unitypackage)
+  2. Download and import [hqm_2.0.3-fix1.unitypackage](https://github.com/HumanteQ/HQMonitorLegacyExample/raw/master/hqm_2.0.3-fix1.unitypackage)
 
-   `(Assets -> Import package -> Custom package -> hqm_2.0.1.unitypackage )`
+   `(Assets -> Import package -> Custom package -> hqm_2.0.3-fix1.unitypackage )`
    
   3. Force resolve dependencies:
 
@@ -58,6 +58,11 @@ Unity package: [hqm_2.0.1.unitypackage](https://github.com/HumanteQ/HQMonitorLeg
             var getGroupNameList = HQSdk.GetGroupNameList();
             
             ...
+```
+
+  9. Send target segments to Firebase Analytics. Firebase Analytics dependency must be imported separately.
+```csharp
+            HQSdk.TrackSegments(true);
 ```
 
 Startup script example: [HqmUnity.cs](https://github.com/HumanteQ/HQMonitorLegacyExample/blob/master/Assets/HqmPlugin/HqmUnity.cs)

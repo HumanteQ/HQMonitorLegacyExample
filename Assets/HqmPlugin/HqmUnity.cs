@@ -49,5 +49,8 @@ public class HqmUnity : MonoBehaviour {
 
         string uuid = HQSdk.GetUuid();
         myText.text = myText.text + "\n\nUuid:" + uuid;
+
+        myText.text = myText.text + "\n\nEnabling segments tracking...";
+        HQSdk.TrackSegments(true);
     }
 }
